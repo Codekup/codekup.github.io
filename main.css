@@ -1,10 +1,11 @@
+@import url("https://fonts.googleapis.com/css?family=Lato");
 @import url("https://fonts.googleapis.com/css?family=Roboto");
 * {
   padding: 0;
   margin: 0; }
 
 .header-btn-highlight {
-  background: linear-gradient(to bottom, #00FF80, #00FF80 20%, black 20%, black 80%, #00FF80 80%, #00FF80); }
+  background: linear-gradient(to bottom, #00FF80, #00FF80 15%, black 15%, black 75%, #00FF80 85%, #00FF80); }
 
 .header {
   height: 70px;
@@ -29,7 +30,22 @@
   .header h3 {
     margin-top: 22px;
     text-align: center;
-    font-family: Roboto, sans-serif;
+    font-family: Lato, Roboto, sans-serif;
+    color: #00FF80; }
+
+.main {
+  background: url("computer.jpg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover; }
+  .main div {
+    height: 50%; }
+  .main h1 {
+    margin-right: 50px;
+    text-align: right;
+    font-size: 4em;
+    font-family: Lato, Roboto, sans-serif;
     color: #00FF80; }
 
 /*# sourceMappingURL=main.css.map */
