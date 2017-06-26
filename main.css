@@ -5,7 +5,7 @@
   margin: 0; }
 
 .header-btn-highlight {
-  background: linear-gradient(to bottom, #00FF80, #00FF80 15%, black 15%, black 75%, #00FF80 85%, #00FF80); }
+  background: linear-gradient(to bottom, #00FF80, #00FF80 15%, black 15%, black 85%, #00FF80 85%, #00FF80); }
 
 .header {
   height: 70px;
