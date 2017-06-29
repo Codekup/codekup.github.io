@@ -1,61 +1,30 @@
-
 @import url('https://fonts.googleapis.com/css?family=Lato');
-@import url('https://fonts.googleapis.com/css?family=Roboto');
 
-$primary-color: #00FF80;
-
-$header-height: 70px;
-$header-btn-width: 150px;
-
-* {
-    padding: 0;
-    margin: 0;
-}
-
-.header-btn-highlight {
-    background: linear-gradient(
-        to bottom,
-        $primary-color,
-        $primary-color 15%,
-        black 15%,
-        black 85%,
-        $primary-color 85%,
-        $primary-color
-    );
-}
+$primary-color: rgb(118, 200, 136);
+$bg-color: rgb(33, 37, 43);
 
 .header {
-    height: $header-height;
-    background: black;
+    background-color: $bg-color;
+    height: 70px;
+    color: $primary-color;
+
+    .row {
+        height: 100%;
+    }
 
     h1 {
-        display: inline-block;
-        text-align: center;
-        float: left;
-        margin-top: 14px;
-        margin-left: 50px;
         font-family: Courier, sans-serif;
-        color: $primary-color;
     }
 
-    .container {
-        float: right;
-        height: 100%;
-        margin-right: 40px;
+    .btn {
+        color: $primary-color;
+        border-color: $primary-color;
+        font-family: Lato, sans-serif;
 
-        div {
-            height: 100%;
-            display: inline-block;
-            width: $header-btn-width;
-            margin: 0;
+        &:hover {
+            color: $bg-color;
+            background-color: $primary-color;
         }
-    }
-
-    h3 {
-        margin-top: 22px;
-        text-align: center;
-        font-family: Lato, Roboto, sans-serif;
-        color: $primary-color;
     }
 }
 
@@ -66,15 +35,9 @@ $header-btn-width: 150px;
     -o-background-size: cover;
     background-size: cover;
 
-    div {
-        height: 50%;
-    }
-
     h1 {
-        margin-right: 50px;
-        text-align: right;
-        font-size: 4em;
-        font-family: Lato, Roboto, sans-serif;
         color: $primary-color;
+        font-family: Lato, sans-serif;
+        font-size: 4em;
     }
 }
