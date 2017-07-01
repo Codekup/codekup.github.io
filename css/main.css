@@ -1,0 +1,19 @@
+@import url("https://fonts.googleapis.com/css?family=Lato");
+nav {
+  background-color: #21252b;
+  color: #76c888; }
+  nav h1 {
+    margin-left: 50px;
+    font-size: 1.5em !important;
+    font-family: Courier, sans-serif; }
+  nav ul {
+    margin-right: 50px; }
+  nav .btn {
+    border-color: #76c888;
+    color: #76c888; }
+    nav .btn:hover {
+      background-color: #76c888;
+      border-color: #76c888;
+      color: #21252b; }
+
+/*# sourceMappingURL=main.css.map */
