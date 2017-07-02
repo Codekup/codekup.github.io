@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css?family=Lato');
+
+$primary-color: rgb(118, 200, 136);
+$bg-color: rgb(33, 37, 43);
+
+nav {
+    background-color: $bg-color;
+    color: $primary-color;
+
+    h1 {
+        margin-left: 50px;
+        font-size: 1.5em !important;
+        font-family: Courier, sans-serif;
+    }
+
+    ul {
+        margin-right: 50px;
+    }
+
+    .btn {
+        border-color: $primary-color;
+        color: $primary-color;
+
+        &:hover {
+            background-color: $primary-color;
+            border-color: $primary-color;
+            color: $bg-color;
+        }
+    }
+}
+
+#main-title {
+    color: $primary-color;
+
+    .row {
+        height: 100%;
+    }
+
+    h1 {
+        width: 85%;
+        margin: auto;
+        font-size: 4.5em;
+        line-height: 175%;
+    }
+}

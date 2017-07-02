@@ -16,4 +16,14 @@ nav {
       border-color: #76c888;
       color: #21252b; }
 
+#main-title {
+  color: #76c888; }
+  #main-title .row {
+    height: 100%; }
+  #main-title h1 {
+    width: 85%;
+    margin: auto;
+    font-size: 4.5em;
+    line-height: 175%; }
+
 /*# sourceMappingURL=main.css.map */
