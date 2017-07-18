@@ -47,8 +47,17 @@ nav {
     }
 }
 
-#info-text-support {
+#continue {
+    background-color: $bg-color;
+    color: white;
+    z-index: -1;
+    position: fixed;
+    bottom: 0;
     width: 100%;
+
+    .row {
+        height: 100%;
+    }
 }
 
 #info-text {

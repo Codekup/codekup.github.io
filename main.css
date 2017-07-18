@@ -28,8 +28,15 @@ nav {
     line-height: 175%;
     text-align: right; }
 
-#info-text-support {
+#continue {
+  background-color: #21252b;
+  color: white;
+  z-index: -1;
+  position: fixed;
+  bottom: 0;
   width: 100%; }
+  #continue .row {
+    height: 100%; }
 
 #info-text {
   background-color: #21252b;
