@@ -1,4 +1,7 @@
 @import url("https://fonts.googleapis.com/css?family=Lato");
+.primary-color {
+  color: #76c888; }
+
 nav {
   background-color: #21252b;
   color: #76c888; }
@@ -21,9 +24,25 @@ nav {
   #main-title .row {
     height: 100%; }
   #main-title h1 {
-    width: 85%;
-    margin: auto;
     font-size: 4.5em;
-    line-height: 175%; }
+    line-height: 175%;
+    text-align: right; }
+
+#info-text-support {
+  width: 100%; }
+
+#info-text {
+  background-color: #21252b;
+  color: white;
+  z-index: 1;
+  width: 100%;
+  top: 0; }
+  #info-text .row {
+    height: 100%; }
+
+.scroll-div {
+  color: #21252b; }
+  .scroll-div .row {
+    height: 100%; }
 
 /*# sourceMappingURL=main.css.map */

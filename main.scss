@@ -3,6 +3,10 @@
 $primary-color: rgb(118, 200, 136);
 $bg-color: rgb(33, 37, 43);
 
+.primary-color {
+    color: $primary-color;
+}
+
 nav {
     background-color: $bg-color;
     color: $primary-color;
@@ -37,9 +41,32 @@ nav {
     }
 
     h1 {
-        width: 85%;
-        margin: auto;
         font-size: 4.5em;
         line-height: 175%;
+        text-align: right;
+    }
+}
+
+#info-text-support {
+    width: 100%;
+}
+
+#info-text {
+    background-color: $bg-color;
+    color: white;
+    z-index: 1;
+    width: 100%;
+    top: 0;
+
+    .row {
+        height: 100%;
+    }
+}
+
+.scroll-div {
+    color: $bg-color;
+
+    .row {
+        height: 100%;
     }
 }
