@@ -1,21 +1,20 @@
 var continue_hidden = false;
 var info_text_offset = 0;
 var info_text_offseted = false;
-var corrected_offset = 0;
 
 $(document).ready(function () {
     var wh = window.innerHeight;
     var ww = window.innerWidth;
-
     var hh = $('#header').height();
-    $('#main-title').css({'height': ((wh - hh) * 0.9) + 'px'});
-    $('#continue').css({'height': ((wh - hh) * 0.1) + 'px'});
-    $('#continue-support').css({'height': ((wh - hh) * 0.1) + 'px'});
+
+    $('#main-title').css({'height': (wh - hh) + 'px'});
+    $('#main-title .col-md-12').css({'height': ((wh - hh) * 0.92) + 'px'});
+    $('#continue').css({'height': ((wh - hh) * 0.08) + 'px'});
+    // $('#continue-support').css({'height': ((wh - hh) * 0.1) + 'px'});
 
     $info_text = $('#info-text');
     $info_text.css({'height': (wh * 0.2) + 'px'});
     info_text_offset = $info_text.offset().top;
-    corrected_offset = $('#correted').offset().top;
 
     $('.scroll-div').css({'height': (wh * 0.8) + 'px'});
 
@@ -49,10 +48,9 @@ $(document).ready(function () {
     });
 
     $(window).scroll(function () {
-        var info_distance = info_text_offset - $(document).scrollTop();
-        var corrected_distance = corrected_offset - $(document).scrollTop();
+        var distance = info_text_offset - $(document).scrollTop();
 
-        if (info_distance <= 0) {
+        if (distance <= 0) {
             if (!info_text_offseted) {
                 $info_text.css({'position': 'fixed'});
                 $('#main-title').after('<div style="height:' + (wh * 0.2) + 'px;"></div>');
@@ -68,7 +66,7 @@ $(document).ready(function () {
             }
         }
 
-        if (info_distance < (hh + (wh - hh) * 0.9)) {
+        if (distance < (hh + (wh - hh) * 0.9)) {
             if (!continue_hidden) {
                 $('#continue').hide();
                 continue_hidden = true;
@@ -80,8 +78,22 @@ $(document).ready(function () {
             }
         }
 
-        if (corrected_distance) {
-            
+        if (distance > -wh * 0.2) {
+            $('#badcodecorrected').css({'opacity': 0});
+            $('#goodcode').css({'opacity': 0});
+        } else if (distance <= -wh * 0.2 && distance >= -wh * 0.6) {
+            var opacity = (1 / (wh * 0.4)) * (distance + wh * 0.6);
+            $('#badcodecorrected').css({'opacity': 1 - opacity});
+        } else if (distance < -wh * 0.6 && distance > -wh) {
+            $('#badcodecorrected').css({'opacity': 1});
+            $('#goodcode').css({'opacity': 0});
+        } else if (distance <= -wh && distance >= -wh * 1.4) {
+            var opacity = (1 / (wh * 0.4)) * (distance + wh * 1.4);
+            $('#badcodecorrected').css({'opacity': opacity});
+            $('#goodcode').css({'opacity': 1 - opacity});
+        } else {
+            $('#badcodecorrected').css({'opacity': 0});
+            $('#goodcode').css({'opacity': 1});
         }
     });
 });
