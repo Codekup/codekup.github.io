@@ -52,4 +52,14 @@ nav {
   .scroll-div .row {
     height: 100%; }
 
+#badcodecorrected, #goodcode {
+  opacity: 0;
+  position: fixed; }
+
+#badcodecorrected {
+  z-index: 1; }
+
+#goodcode {
+  z-index: 2; }
+
 /*# sourceMappingURL=main.css.map */
